@@ -42,4 +42,9 @@ export class ProductsController {
   remove(@Param('id') id: string) {
     return this.productsService.remove(+id);
   }
+
+  @Patch('available/:id')
+  available(@Param('id') id: string) {
+    return this.productsService.available(+id);
+  }
 }
